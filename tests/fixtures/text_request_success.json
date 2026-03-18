@@ -1,0 +1,27 @@
+{
+    "id": "msg_01A1b2C3d4E5f6G7h8I9j0",
+    "type": "message",
+    "role": "assistant",
+    "content": [
+        {
+            "type": "text",
+            "text": "Anthropic can help with drafting, summarising, and explaining text."
+        },
+        {
+            "type": "thinking",
+            "thinking": "Internal reasoning block",
+            "signature": "sig_01Example"
+        },
+        {
+            "type": "text",
+            "text": " It also supports structured multi-turn conversations."
+        }
+    ],
+    "model": "claude-sonnet-4-6",
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "usage": {
+        "input_tokens": 23,
+        "output_tokens": 150
+    }
+}
