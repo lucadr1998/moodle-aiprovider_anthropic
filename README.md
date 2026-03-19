@@ -24,8 +24,8 @@ The Anthropic API Provider plugin integrates Anthropic's Claude AI models into M
 
 ### Prerequisites
 
-- Moodle 4.5+
-- PHP 8.0 or higher
+- Moodle 5.1+
+- PHP 8.2 or higher
 - Valid Anthropic API key
 
 ### Installation Steps
