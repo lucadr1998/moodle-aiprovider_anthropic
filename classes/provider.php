@@ -91,11 +91,13 @@ class provider extends \core_ai\provider {
         $component = \core\component::get_component_from_classname(get_class($this));
 
         if ($this->enableuserratelimit) {
-            if (!$ratelimiter->check_user_rate_limit(
-                component: $component,
-                ratelimit: $this->userratelimit,
-                userid: $action->get_configuration('userid')
-            )) {
+            if (
+                !$ratelimiter->check_user_rate_limit(
+                    component: $component,
+                    ratelimit: $this->userratelimit,
+                    userid: $action->get_configuration('userid')
+                )
+            ) {
                 return [
                     'success' => false,
                     'errorcode' => 429,
@@ -105,10 +107,12 @@ class provider extends \core_ai\provider {
         }
 
         if ($this->enableglobalratelimit) {
-            if (!$ratelimiter->check_global_rate_limit(
-                component: $component,
-                ratelimit: $this->globalratelimit
-            )) {
+            if (
+                !$ratelimiter->check_global_rate_limit(
+                    component: $component,
+                    ratelimit: $this->globalratelimit
+                )
+            ) {
                 return [
                     'success' => false,
                     'errorcode' => 429,

@@ -1,0 +1,17 @@
+{
+  "id": "msg_01A2B3C4D5E6F7G8H9I0J",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-sonnet-4-6",
+  "content": [
+    {
+      "type": "text",
+      "text": "Sure, here is some sample text from Anthropic."
+    }
+  ],
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 11,
+    "output_tokens": 568
+  }
+}
