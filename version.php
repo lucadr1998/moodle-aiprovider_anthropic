@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'aiprovider_anthropic';
-$plugin->version = 2026032200;
+$plugin->version = 2026032201;
 $plugin->requires = 2025100600;
 $plugin->release = '1.0.1';
 $plugin->maturity = MATURITY_STABLE;
