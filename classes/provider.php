@@ -44,7 +44,7 @@ class provider extends \core_ai\provider {
         $actionname = substr($action, (strrpos($action, '\\') + 1));
         $customdata['actionname'] = $actionname;
         $customdata['action'] = $action;
-        $customdata['providername'] = 'aiprovider_anthropic';
+        $customdata['providername'] = \core\component::get_component_from_classname(static::class);
         if ($actionname === 'generate_text' || $actionname === 'summarise_text' || $actionname === 'explain_text') {
             return new form\action_generate_text_form(customdata: $customdata);
         }
@@ -58,7 +58,7 @@ class provider extends \core_ai\provider {
         $customdata = [
             'actionname' => $actionname,
             'action' => $action,
-            'providername' => 'aiprovider_anthropic',
+            'providername' => \core\component::get_component_from_classname(static::class),
         ];
         if ($actionname === 'generate_text' || $actionname === 'summarise_text' || $actionname === 'explain_text') {
             $mform = new form\action_generate_text_form(customdata: $customdata);

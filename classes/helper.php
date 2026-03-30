@@ -104,7 +104,7 @@ class helper {
             return array_key_first($models);
         }
 
-        return array_key_first(self::get_fallback_models());
+        return self::get_fallback_models()[0]['id'];
     }
 
     /**
@@ -129,7 +129,7 @@ class helper {
             return self::to_model_options($cached['models']);
         }
 
-        return self::get_fallback_models();
+        return self::to_model_options(self::get_fallback_models());
     }
 
     /**
@@ -306,13 +306,13 @@ class helper {
     /**
      * Return a static fallback list when API discovery is unavailable.
      *
-     * @return array
+     * @return array Raw model payload compatible with {@see to_model_options()}.
      */
     protected static function get_fallback_models(): array {
         return [
-            'claude-opus-4-6' => 'Claude Opus 4.6 (claude-opus-4-6)',
-            'claude-sonnet-4-6' => 'Claude Sonnet 4.6 (claude-sonnet-4-6)',
-            'claude-haiku-4-5-20251001' => 'Claude Haiku 4.5 (claude-haiku-4-5-20251001)',
+            ['id' => 'claude-opus-4-6', 'display_name' => 'Claude Opus 4.6'],
+            ['id' => 'claude-sonnet-4-6', 'display_name' => 'Claude Sonnet 4.6'],
+            ['id' => 'claude-haiku-4-5-20251001', 'display_name' => 'Claude Haiku 4.5'],
         ];
     }
 
