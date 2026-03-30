@@ -236,8 +236,10 @@ final class process_generate_text_test extends \advanced_testcase {
         $this->assertTrue($result['success']);
         $this->assertEquals('msg_01A1b2C3d4E5f6G7h8I9j0', $result['id']);
         $this->assertNull($result['fingerprint']);
+        $expectedcontent = 'Anthropic can help with drafting, summarising, and explaining text.'
+            . ' It also supports structured multi-turn conversations.';
         $this->assertEquals(
-            'Anthropic can help with drafting, summarising, and explaining text. It also supports structured multi-turn conversations.',
+            $expectedcontent,
             $result['generatedcontent'],
         );
         $this->assertEquals('end_turn', $result['finishreason']);
