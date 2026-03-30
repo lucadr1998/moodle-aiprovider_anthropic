@@ -101,7 +101,7 @@ class provider extends \core_ai\provider {
                 return [
                     'success' => false,
                     'errorcode' => 429,
-                    'errormessage' => 'User rate limit exceeded',
+                    'errormessage' => get_string('error:userratelimitexceeded', 'aiprovider_anthropic'),
                 ];
             }
         }
@@ -116,7 +116,7 @@ class provider extends \core_ai\provider {
                 return [
                     'success' => false,
                     'errorcode' => 429,
-                    'errormessage' => 'Global rate limit exceeded',
+                    'errormessage' => get_string('error:globalratelimitexceeded', 'aiprovider_anthropic'),
                 ];
             }
         }

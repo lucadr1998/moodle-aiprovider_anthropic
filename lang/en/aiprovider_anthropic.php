@@ -51,3 +51,5 @@ $string['privacy:metadata:aiprovider_anthropic:model'] = 'The model used to gene
 $string['privacy:metadata:aiprovider_anthropic:prompttext'] = 'The user entered text prompt used to generate the response.';
 $string['userratelimit'] = 'Maximum number of requests per user';
 $string['userratelimit_desc'] = 'The number of requests allowed per hour, per user.';
+$string['error:globalratelimitexceeded'] = 'Global rate limit exceeded';
+$string['error:userratelimitexceeded'] = 'User rate limit exceeded';
